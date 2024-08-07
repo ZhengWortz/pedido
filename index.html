@@ -7,7 +7,7 @@
     <title>Pedido de Namoro</title>
     <style>
         body {
-            background-color: #ffcccc;
+            background-color: #7c56d3;
             text-align: center;
             font-family: Arial, sans-serif;
             display: flex;
@@ -22,19 +22,23 @@
         }
 
         h1 {
-            color: #ff3366;
+            color: #fffefe;
+        }
+
+        .text-branco {
+            color: #ffffff;
         }
 
         .heart {
             font-size: 50px;
-            color: #ff3366;
+            color: #36f836;
             cursor: pointer;
         }
 
         #nao {
             font-size: 24px;
-            color: #333;
-            background-color: #ffcccc;
+            color: #ffffff;
+            background-color: #7c56d3;
             border: none;
             cursor: pointer;
             position: absolute;
@@ -44,30 +48,41 @@
             display: none;
         }
 
-        #gif {
+        .texto-vermelho {
+            color: red;
+        }
+
+        #gif-container {
             display: none;
             margin-top: 20px;
+        }
+
+        #gif {
             max-width: 100%;
             height: auto;
+            display: block;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Um Pedido de Namoro Especial</h1>
-        <p>Olá amor ❤️,</p>
-        <p>Quero dizer que você ilumina minha vida e me deixa feliz como ninguém mais.</p>
-        <p>Você aceita namorar comigo🌹?</p>
+        <h1>Um Pedido Especial Para Uma Pessoa Especial</h1>
+        <p class="text-branco">Olá amor ❤️</p>
+        <p class="text-branco">Que tal você se casar comigo e a gente criar gatinhos?</p>
+        <p class="text-branco">Aceita 🌹?</p>
         <p class="heart" onclick="mostrarResposta()">Sim</p>
         <button id="nao" onmouseover="mudarPosicao()">Não</button>
-        <p id="resposta"></p>
-        <img id="gif" src="gatinhos.gif" alt="GIF de comemoração">
+        <p id="resposta" class="texto-vermelho"></p>
+        <div id="gif-container">
+            <img id="gif" src="gatinhos.gif" alt="GIF de comemoração">
+        </div>
     </div>
     <script>
         function mostrarResposta() {
             document.getElementById('resposta').style.display = 'block';
             document.getElementById('resposta').innerHTML = 'Sim! Eu aceito, meu amor. ❤️';
-            document.getElementById('gif').style.display = 'block';
+            document.getElementById('gif-container').style.display = 'block';
             setTimeout(function() {
                 window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
             }, 2000); // 2 segundos para exibir a mensagem antes de redirecionar
